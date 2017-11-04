@@ -37,3 +37,23 @@ Outline:
     - The key point is that state input is to be unchanged; treat state as immutable.
     - Immutable.js mention
   - Array-Delete
+    - [_Cue:_]
+      - Edit: ./src/array-delete.js
+    - [_Cue_:]
+      - Execute: ./node_modules/.bin/babel src -d dist
+    - [_Cue_:]
+      - Execute: node dist/array.js
+  - Array-Ducks
+    - [_Cue:_]
+      - URL: https://github.com/erikras/ducks-modular-redux
+    - [_Cue:_]
+      - Edit: ./src/ducks/array.js
+      - Action Creators
+      - Reducers
+      - Selectors
+    - [_Cue:_]
+      - Edit: ./src/array-ducks.js
+    - [_Cue_:]
+      - Execute: ./node_modules/.bin/babel src -d dist
+    - [_Cue_:]
+      - Execute: node dist/array-ducks.js
