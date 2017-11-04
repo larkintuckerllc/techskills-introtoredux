@@ -5,8 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "normalizr": "^3.2.4",
-    "redux": "^3.7.2",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

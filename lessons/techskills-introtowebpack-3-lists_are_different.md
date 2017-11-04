@@ -32,13 +32,36 @@ Outline:
         - Add
         - Update
         - Remove
+        - Mention: combineReducers
         - Mention: normalizer
       - Selectors
        - Singular
        - Plural
     - [_Cue:_]
       - Edit: ./src/list-ducks.js
+      - Fetch
+      - Add
+      - Remove
+      - Update
     - [_Cue_:]
       - Execute: ./node_modules/.bin/babel src -d dist
     - [_Cue_:]
       - Execute: node dist/list-ducks.js
+  - List-Fixed
+    - [_Cue:_]
+      - Edit: ./src/list-fixed.js
+      - Bogus
+    - [_Cue_:]
+      - Execute: ./node_modules/.bin/babel src -d dist
+    - [_Cue_:]
+      - Execute: node dist/list-fixed.js
+    - [_Cue_:]
+      - Execute: npm install reselect --save
+    - [_Cue:_]
+      - Edit: ./src/list-fixed.js
+      - Uncomment
+      - memoization
+    - [_Cue_:]
+      - Execute: ./node_modules/.bin/babel src -d dist
+    - [_Cue_:]
+      - Execute: node dist/list-fixed.js
