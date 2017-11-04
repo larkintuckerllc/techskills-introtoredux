@@ -4,7 +4,9 @@ import { createStore } from 'redux';
 const adder = (state = [], action) => {
   switch (action.type) {
     case 'ADD':
-      return [...state, action.value];
+      // state.push(action.value); // BREAKS PURE FUNCTION
+      // return state; // BREAKS PURE FUNCTION
+      return [...state, action.value]; // ENABLES PURE FUNCTION
     default:
       return state;
   }

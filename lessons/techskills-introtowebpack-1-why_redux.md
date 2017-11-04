@@ -60,6 +60,9 @@ Outline:
     - [_Cue_:]
       - Execute: npm install redux --save
     - Project also includes eslint libraries and configuration; not needed, not covered
+  - [_Question_:]
+    - We have learned a lot of theory and did a a lot of setup, are we ready to look at code?
+      - Yes
   - Hello-World
     - [_Cue_:]
       - Edit: ./src/hello-world.js
