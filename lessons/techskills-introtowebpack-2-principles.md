@@ -43,6 +43,8 @@ Outline:
       - Execute: ./node_modules/.bin/babel src -d dist
     - [_Cue_:]
       - Execute: node dist/array.js
+  - [_Question_:] Can see this is going to get complicated, is there a good way to organize my code.
+    - Yes, the duck pattern.
   - Array-Ducks
     - [_Cue:_]
       - URL: https://github.com/erikras/ducks-modular-redux

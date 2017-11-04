@@ -1,0 +1,18 @@
+{
+  "byId": {
+    "m": {
+      "id": "m",
+      "name": "mango",
+      "description": "Sweet and sticky"
+    },
+    "n": {
+      "id": "n",
+      "name": "nectarine",
+      "description": "Crunchy goodness"
+    }
+  },
+  "ids": [
+    "m",
+    "n"
+  ]
+}
