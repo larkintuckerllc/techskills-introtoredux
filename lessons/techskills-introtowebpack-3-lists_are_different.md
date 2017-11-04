@@ -49,7 +49,7 @@ Outline:
       - Execute: node dist/list-ducks.js
   - List-Fixed
     - [_Cue:_]
-      - Edit: ./src/list-fixed.js
+      - Edit: ./src/list-ducks-fixed.js
       - Bogus
     - [_Cue_:]
       - Execute: ./node_modules/.bin/babel src -d dist
@@ -58,10 +58,10 @@ Outline:
     - [_Cue_:]
       - Execute: npm install reselect --save
     - [_Cue:_]
-      - Edit: ./src/list-fixed.js
+      - Edit: ./src/list-ducks-fixed.js
       - Uncomment
       - memoization
     - [_Cue_:]
       - Execute: ./node_modules/.bin/babel src -d dist
     - [_Cue_:]
-      - Execute: node dist/list-fixed.js
+      - Execute: node dist/list-ducks-fixed.js

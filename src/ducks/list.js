@@ -1,4 +1,3 @@
-/* eslint no-console: "off" */
 import { combineReducers } from 'redux';
 
 // ACTION CREATORS

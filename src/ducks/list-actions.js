@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
-// import { createSelector } from 'reselect'; // FIXED
+import { createSelector } from 'reselect'; // FIXED
+import { combineActions, createAction, handleActions } from 'redux-actions';
 
 // ACTION CREATORS
+/*
 export const fetch = value => ({
   type: 'FETCH',
   value,
@@ -18,7 +20,13 @@ export const update = value => ({
   type: 'UPDATE',
   value,
 });
+*/
+export const fetch = createAction('FETCH');
+export const add = createAction('ADD');
+export const remove = createAction('REMOVE');
+export const update = createAction('UPDATE');
 // REDUCERS
+/*
 const byId = (state = {}, action) => {
   switch (action.type) {
     case 'FETCH': {
@@ -47,6 +55,34 @@ const byId = (state = {}, action) => {
       return state;
   }
 };
+*/
+const byId = handleActions({
+  [fetch](state, action) {
+    const entry = {};
+    for (let i = 0; i < action.payload.length; i += 1) {
+      const item = action.payload[i];
+      entry[item.id] = item;
+    }
+    return entry;
+  },
+  [combineActions(
+    update,
+    add,
+  )](state, action) {
+    const entry = {};
+    entry[action.payload.id] = action.payload;
+    return {
+      ...state,
+      ...entry,
+    };
+  },
+  [remove](state, action) {
+    const newState = { ...state };
+    delete newState[action.payload];
+    return newState;
+  },
+}, {});
+/*
 const ids = (state = [], action) => {
   switch (action.type) {
     case 'FETCH':
@@ -62,19 +98,29 @@ const ids = (state = [], action) => {
       return state;
   }
 };
+*/
+const ids = handleActions({
+  [fetch](state, action) {
+    return action.payload.map(o => o.id);
+  },
+  [add](state, action) {
+    return [...state, action.payload.id];
+  },
+  [remove](state, action) {
+    const newState = [...state];
+    newState.splice(state.indexOf(action.payload), 1);
+    return newState;
+  },
+}, []);
 export default combineReducers({
   byId,
   ids,
 });
 // SELECTORS
 export const getItem = (state, id) => state.byId[id];
-export const getItems = state => state.ids.map(id => state.byId[id]); // BROKEN
-/*
-// FIXED BLOCK
 const getItemsIds = state => state.ids;
 const getItemsById = state => state.byId;
 export const getItems = createSelector(
   [getItemsIds, getItemsById],
   (itemsIds, itemsById) => itemsIds.map(id => itemsById[id]),
 );
-*/
