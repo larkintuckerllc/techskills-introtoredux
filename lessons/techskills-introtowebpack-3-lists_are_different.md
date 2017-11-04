@@ -1,6 +1,6 @@
 ----------------------------------
 
-filename: techskills-introtoredux-2-lists_are_different
+filename: techskills-introtoredux-3-lists_are_different
 
 title: Lists are Different
 
@@ -34,6 +34,7 @@ Outline:
         - Remove
         - Mention: combineReducers
         - Mention: normalizer
+        - Mention: immutable
       - Selectors
        - Singular
        - Plural
@@ -47,6 +48,8 @@ Outline:
       - Execute: ./node_modules/.bin/babel src -d dist
     - [_Cue_:]
       - Execute: node dist/list-ducks.js
+  - [_Question_:]
+    - Lists were a bit more complicated, what is next?
   - List-Fixed
     - [_Cue:_]
       - Edit: ./src/list-ducks-fixed.js
