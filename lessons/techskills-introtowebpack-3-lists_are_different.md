@@ -63,7 +63,7 @@ Outline:
     - [_Cue:_]
       - Edit: ./src/list-ducks-fixed.js
       - Uncomment
-      - memoization
+      - memoization: caching function
     - [_Cue_:]
       - Execute: ./node_modules/.bin/babel src -d dist
     - [_Cue_:]

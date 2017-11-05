@@ -11,7 +11,7 @@ subtitle: Intro to Redux
 Outline:
 
   - [_Question_:]
-    - Having done lists, I am not sure what else we could cover?
+    - Having done lists (pretty much the most complex thing), I am not sure what else we could cover?
       - The lists example points to one complaint of Redux; there is a lot of boilerplate code; we will address this.
       - And we saved "thunk" for last.
   - Standard Actions
@@ -28,10 +28,12 @@ Outline:
     - [_Cue_:]
       - Execute: node dist/list-ducks-actions.js
   - Thunk
-    - Definition: function that return a function
-    - [_Cue_:]
-      - Edit: ./lessons/thunk-definition.txt
-    - Action creators that return functions
+    - [_Question_:]
+      - So what is a thunk anyway?
+      - Definition: function that returns a function
+      - [_Cue_:]
+        - Edit: ./lessons/thunk-definition.txt
+       - Action creators that return functions (Redux calls them)
     - Learn by example
     - [_Cue_:]
       - Execute: npm install redux-thunk --save
