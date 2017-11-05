@@ -33,3 +33,23 @@ Outline:
       - Edit: ./lessons/thunk-definition.txt
     - Action creators that return functions
     - Learn by example
+    - [_Cue_:]
+      - Execute: npm install redux-thunk --save
+    - [_Cue_:]
+      - Execute: ./node_modules/.bin/babel src -d dist
+    - [_Cue_:]
+      - Execute: node dist/random-ducks.js
+      - Fetches a random number 1-10 asynchronously (API) displaying if fething or not and number
+    - [_Cue_:]
+      - Edit: ./src/random-ducks.js
+      - Store configuration
+      - Usage of random
+    - [_Cue_:]
+      - Edit: ./src/ducks/random.js
+      - Look at everything but fetch
+      - Look at fetch
+      - randomApi might some remote call to server
+  - Wrap Up  
+    - Front end frameworks can integrate with Redux, e.g., react-redux
+    - [_Cue_:]
+      - URL: https://github.com/reactjs/react-redux
