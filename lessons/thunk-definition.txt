@@ -1,0 +1,7 @@
+function sampleThunk() {
+  return function() {
+    console.log('do stuff now');
+  }
+}
+
+sampleThunk()();

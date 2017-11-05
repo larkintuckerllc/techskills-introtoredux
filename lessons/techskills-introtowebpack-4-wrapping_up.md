@@ -27,3 +27,9 @@ Outline:
       - Execute: ./node_modules/.bin/babel src -d dist
     - [_Cue_:]
       - Execute: node dist/list-ducks-actions.js
+  - Thunk
+    - Definition: function that return a function
+    - [_Cue_:]
+      - Edit: ./lessons/thunk-definition.txt
+    - Action creators that return functions
+    - Learn by example
